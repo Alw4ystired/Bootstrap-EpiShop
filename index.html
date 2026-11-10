@@ -111,6 +111,7 @@
 
         <div class="row">
 
+          <!-- Card scarpe -->
           <article class="col-12 col-sm-6 col-xl-4 col-xxl-3 mb-3">
             <div class="card h-100 shadow-sm">
               <img src="https://placehold.co/300x180" class="card-img-top" alt="Sneaker Run">
@@ -119,7 +120,6 @@
                 <p class="card-text text-muted">Scarpe comode per il tempo libero.</p>
                 <p class="fw-bold fs-5 m-0">€ 89,00</p>
               </div>
-              <!-- Footer card con bottone modale -->
               <div class="card-footer bg-white border-0">
                 <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
                   data-bs-target="#prodotto-1">Dettagli</button>
@@ -127,6 +127,7 @@
             </div>
           </article>
 
+          <!-- Card t-shirt -->
           <article class="col-12 col-sm-6 col-xl-4 col-xxl-3 mb-3">
             <div class="card h-100 shadow-sm">
               <img src="https://placehold.co/300x180" class="card-img-top" alt="T-shirt basic">
@@ -135,7 +136,6 @@
                 <p class="card-text text-muted">Cotone 100%, vestibilità regolare.</p>
                 <p class="fw-bold fs-5 m-0">€ 19,00</p>
               </div>
-              <!-- Footer card con bottone modale -->
               <div class="card-footer bg-white border-0">
                 <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
                   data-bs-target="#prodotto-2">Dettagli</button>
@@ -143,6 +143,7 @@
             </div>
           </article>
 
+          <!-- Card borsa -->
           <article class="col-12 col-sm-6 col-xl-4 col-xxl-3 mb-3">
             <div class="card h-100 shadow-sm">
               <img src="https://placehold.co/300x180" class="card-img-top" alt="Borsa city">
@@ -151,7 +152,6 @@
                 <p class="card-text text-muted">Perfetta per l'ufficio o il weekend.</p>
                 <p class="fw-bold fs-5 m-0">€ 49,00</p>
               </div>
-              <!-- Footer card con bottone modale -->
               <div class="card-footer bg-white border-0">
                 <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
                   data-bs-target="#prodotto-3">Dettagli</button>
@@ -159,16 +159,15 @@
             </div>
           </article>
 
-          <!-- CARD 4 (Extra per xxl) -->
+          <!-- Card aggiuntiva per visualizzazione xxl -->
           <article class="col-12 col-sm-6 col-xl-4 col-xxl-3 mb-3">
             <div class="card h-100 shadow-sm">
               <img src="https://placehold.co/300x180" class="card-img-top" alt="Borsa city">
               <div class="card-body">
-                <h5 class="card-title">Borsa city</h5>
-                <p class="card-text text-muted">Perfetta per l'ufficio o il weekend.</p>
-                <p class="fw-bold fs-5 m-0">€ 49,00</p>
+                <h5 class="card-title">Palla da basket</h5>
+                <p class="card-text text-muted">Che ci devo scrivere, rimbalza.</p>
+                <p class="fw-bold fs-5 m-0">€ 300,00</p>
               </div>
-              <!-- Footer card con bottone modale -->
               <div class="card-footer bg-white border-0">
                 <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
                   data-bs-target="#prodotto-4">Dettagli</button>
@@ -182,6 +181,92 @@
     </div>
   </main>
 
+  <!-- Modali -->
+
+  <!-- Modale scarpe -->
+  <div class="modal fade" id="prodotto-1" tabindex="-1" aria-labelledby="prodotto-1-title" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="prodotto-1-title">Sneaker Run</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://placehold.co/600x300" class="img-fluid mb-3" alt="Sneaker Run">
+          <p>Grandi scarpe da corsa, comprale su, non fare il tirchio.</p>
+          <p class="fw-bold fs-4 m-0">€ 89,00</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+          <button type="button" class="btn btn-success">Aggiungi al carrello</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modale maglietta -->
+  <div class="modal fade" id="prodotto-2" tabindex="-1" aria-labelledby="prodotto-2-title" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="prodotto-2-title">T-shirt basic</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://placehold.co/600x300" class="img-fluid mb-3" alt="T-shirt basic">
+          <p>Una maglietta veramente terribile, te la vendono già bucata.</p>
+          <p class="fw-bold fs-4 m-0">€ 19,00</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+          <button type="button" class="btn btn-success">Aggiungi al carrello</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Modale maglietta -->
+  <div class="modal fade" id="prodotto-3" tabindex="-1" aria-labelledby="prodotto-3-title" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="prodotto-3-title">Borsa city</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://placehold.co/600x300" class="img-fluid mb-3" alt="T-shirt basic">
+          <p>Una normalissima borsa, però siccome ha "city" nel nome, se la usi e vai in campagna rischi una multa.</p>
+          <p class="fw-bold fs-4 m-0">€ 49,00</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+          <button type="button" class="btn btn-success">Aggiungi al carrello</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+      <!-- Modale maglietta -->
+  <div class="modal fade" id="prodotto-4" tabindex="-1" aria-labelledby="prodotto-4-title" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="prodotto-4-title">Palla da basket</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://placehold.co/600x300" class="img-fluid mb-3" alt="T-shirt basic">
+          <p>Come c'è scritto di là, rimbalza. 300 euro. Grazie.</p>
+          <p class="fw-bold fs-4 m-0">€ 300,00</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+          <button type="button" class="btn btn-success">Aggiungi al carrello</button>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
   <footer class="bg-dark text-white py-4 mt-5">
     <div class="container text-center">
       <p class="m-0">©2026 EpiShop - tutti i diritti riservati</p>
