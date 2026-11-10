@@ -13,87 +13,42 @@
 
   <nav class="navbar navbar-expand-md bg-primary navbar-dark py-3">
     <div class="container">
-
       <a class="navbar-brand fw-bold fs-3" href="#">EpiShop</a>
-
-      <!-- Bottone Hamburger (visibile solo su mobile) -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-menu">
         <span class="navbar-toggler-icon"></span>
       </button>
-
-      <!-- Menu hamburger -->
       <div class="collapse navbar-collapse" id="nav-menu">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Prodotti</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Offerte</a>
-          </li>
-          <!-- Categorie (visibile solo da tablet in su, grazie alla navbar che si espande con navbar-expand-md) -->
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contatti</a>
-          </li>
-          <!-- Account aggiunto per extra -->
-          <li class="nav-item">
-            <a class="nav-link" href="#">Account</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Prodotti</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Offerte</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contatti</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Account</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Carosello -->
+  <!-- Carosello (Vuoto: verrà popolato da JS) -->
   <div id="hero" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-
-    <div class="carousel-inner">
-
-      <!-- Slide saldi di primavera -->
-      <div class="carousel-item active">
-        <div class="bg-primary text-white text-center py-5">
-          <div class="container py-4">
-            <h2 class="fs-1 fw-bold mb-3">Saldi di primavera</h2>
-            <p class="fs-5 m-0">Scopri le offerte sui prodotti in evidenza, fino al 50% di sconto.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Slide nuova collezione -->
-      <div class="carousel-item">
-        <div class="bg-success text-white text-center py-5">
-          <div class="container py-4">
-            <h2 class="fs-1 fw-bold mb-3">Nuova Collezione</h2>
-            <p class="fs-5 m-0">Le ultime tendenze per la tua estate. Scopri i nuovi arrivi.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Slide spedizione gratuita -->
-      <div class="carousel-item">
-        <div class="bg-dark text-white text-center py-5">
-          <div class="container py-4">
-            <h2 class="fs-1 fw-bold mb-3">Spedizione Gratuita</h2>
-            <p class="fs-5 m-0">Su tutti gli ordini superiori a 50€. Approfittane ora!</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Controlli Avanti / Indietro -->
+    <div class="carousel-inner" id="carousel-container"></div>
+    
     <button class="carousel-control-prev" type="button" data-bs-target="#hero" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     </button>
     <button class="carousel-control-next" type="button" data-bs-target="#hero" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
     </button>
-
   </div>
 
   <main class="container my-4">
-    <div class="row">
+    <!-- Alert -->
+    <div class="alert alert-info alert-dismissible fade show" role="alert">
+      Spedizione GRATIS oltre i 50 €.
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Chiudi"></button>
+    </div>
 
-      <!-- Sidebar (visibile solo da desktop) -->
+    <div class="row">
+      <!-- Sidebar -->
       <aside class="col-lg-3 d-none d-lg-block">
         <div class="bg-light p-3 rounded border">
           <h3 class="fs-5 fw-bold mb-3">Categorie</h3>
@@ -109,171 +64,24 @@
           Prodotti in evidenza &nbsp; <span class="badge bg-danger fs-6">-30%</span>
         </h2>
 
-        <div class="row">
-
-          <!-- Card scarpe -->
-          <article class="col-12 col-sm-6 col-xl-4 col-xxl-3 mb-3">
-            <div class="card h-100 shadow-sm">
-              <img src="https://placehold.co/300x180" class="card-img-top" alt="Sneaker Run">
-              <div class="card-body">
-                <h5 class="card-title">Sneaker Run</h5>
-                <p class="card-text text-muted">Scarpe comode per il tempo libero.</p>
-                <p class="fw-bold fs-5 m-0">€ 89,00</p>
-              </div>
-              <div class="card-footer bg-white border-0">
-                <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
-                  data-bs-target="#prodotto-1">Dettagli</button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card t-shirt -->
-          <article class="col-12 col-sm-6 col-xl-4 col-xxl-3 mb-3">
-            <div class="card h-100 shadow-sm">
-              <img src="https://placehold.co/300x180" class="card-img-top" alt="T-shirt basic">
-              <div class="card-body">
-                <h5 class="card-title">T-shirt basic</h5>
-                <p class="card-text text-muted">Cotone 100%, vestibilità regolare.</p>
-                <p class="fw-bold fs-5 m-0">€ 19,00</p>
-              </div>
-              <div class="card-footer bg-white border-0">
-                <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
-                  data-bs-target="#prodotto-2">Dettagli</button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card borsa -->
-          <article class="col-12 col-sm-6 col-xl-4 col-xxl-3 mb-3">
-            <div class="card h-100 shadow-sm">
-              <img src="https://placehold.co/300x180" class="card-img-top" alt="Borsa city">
-              <div class="card-body">
-                <h5 class="card-title">Borsa city</h5>
-                <p class="card-text text-muted">Perfetta per l'ufficio o il weekend.</p>
-                <p class="fw-bold fs-5 m-0">€ 49,00</p>
-              </div>
-              <div class="card-footer bg-white border-0">
-                <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
-                  data-bs-target="#prodotto-3">Dettagli</button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card aggiuntiva per visualizzazione xxl -->
-          <article class="col-12 col-sm-6 col-xl-4 col-xxl-3 mb-3">
-            <div class="card h-100 shadow-sm">
-              <img src="https://placehold.co/300x180" class="card-img-top" alt="Borsa city">
-              <div class="card-body">
-                <h5 class="card-title">Palla da basket</h5>
-                <p class="card-text text-muted">Che ci devo scrivere, rimbalza.</p>
-                <p class="fw-bold fs-5 m-0">€ 300,00</p>
-              </div>
-              <div class="card-footer bg-white border-0">
-                <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
-                  data-bs-target="#prodotto-4">Dettagli</button>
-              </div>
-            </div>
-          </article>
-
-        </div>
+        <!-- Griglia Prodotti -->
+        <div class="row" id="products-container"></div>
       </section>
-
     </div>
   </main>
 
-  <!-- Modali -->
+  <!-- Contenitore Modali -->
+  <div id="modals-container"></div>
 
-  <!-- Modale scarpe -->
-  <div class="modal fade" id="prodotto-1" tabindex="-1" aria-labelledby="prodotto-1-title" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="prodotto-1-title">Sneaker Run</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
-        </div>
-        <div class="modal-body">
-          <img src="https://placehold.co/600x300" class="img-fluid mb-3" alt="Sneaker Run">
-          <p>Grandi scarpe da corsa, comprale su, non fare il tirchio.</p>
-          <p class="fw-bold fs-4 m-0">€ 89,00</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
-          <button type="button" class="btn btn-success">Aggiungi al carrello</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modale maglietta -->
-  <div class="modal fade" id="prodotto-2" tabindex="-1" aria-labelledby="prodotto-2-title" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="prodotto-2-title">T-shirt basic</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
-        </div>
-        <div class="modal-body">
-          <img src="https://placehold.co/600x300" class="img-fluid mb-3" alt="T-shirt basic">
-          <p>Una maglietta veramente terribile, te la vendono già bucata.</p>
-          <p class="fw-bold fs-4 m-0">€ 19,00</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
-          <button type="button" class="btn btn-success">Aggiungi al carrello</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-    <!-- Modale maglietta -->
-  <div class="modal fade" id="prodotto-3" tabindex="-1" aria-labelledby="prodotto-3-title" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="prodotto-3-title">Borsa city</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
-        </div>
-        <div class="modal-body">
-          <img src="https://placehold.co/600x300" class="img-fluid mb-3" alt="T-shirt basic">
-          <p>Una normalissima borsa, però siccome ha "city" nel nome, se la usi e vai in campagna rischi una multa.</p>
-          <p class="fw-bold fs-4 m-0">€ 49,00</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
-          <button type="button" class="btn btn-success">Aggiungi al carrello</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-      <!-- Modale maglietta -->
-  <div class="modal fade" id="prodotto-4" tabindex="-1" aria-labelledby="prodotto-4-title" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="prodotto-4-title">Palla da basket</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
-        </div>
-        <div class="modal-body">
-          <img src="https://placehold.co/600x300" class="img-fluid mb-3" alt="T-shirt basic">
-          <p>Come c'è scritto di là, rimbalza. 300 euro. Grazie.</p>
-          <p class="fw-bold fs-4 m-0">€ 300,00</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
-          <button type="button" class="btn btn-success">Aggiungi al carrello</button>
-        </div>
-      </div>
-    </div>
-  </div>
- 
   <footer class="bg-dark text-white py-4 mt-5">
     <div class="container text-center">
       <p class="m-0">©2026 EpiShop - tutti i diritti riservati</p>
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+   
 </body>
 
 </html>
