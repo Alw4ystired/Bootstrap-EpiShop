@@ -10,99 +10,153 @@
 </head>
 
 <body>
-  <header class="bg-primary text-white py-3">
-    <div class="container d-flex justify-content-between align-items-center">
-      <h1 class="fs-3 m-0">EpiShop</h1>
-      <nav class="d-flex align-items-center">
-        <a href="#" class="text-white text-decoration-none mx-2">Prodotti</a>
-        <a href="#" class="text-white text-decoration-none mx-2">Offerte</a>
-        <!-- Categorie (visibile solo da tablet, d-none lo rende invisibile e d-md-inline lo rende visibile soltanto a md, quindi visualizzazione desktop e lo rende anche inline) -->
-        <a href="#" class="text-white text-decoration-none mx-2 d-none d-md-inline">Contatti</a>
-        <!-- Idem comparate qua-->
-        <a href="#" class="text-white text-decoration-none mx-2 d-none d-lg-inline">Account</a>
-      </nav>
+
+  <nav class="navbar navbar-expand-md bg-primary navbar-dark py-3">
+    <div class="container">
+      
+      <a class="navbar-brand fw-bold fs-3" href="#">EpiShop</a>
+
+      <!-- Bottone Hamburger (visibile solo su mobile) -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menu hamburger -->
+      <div class="collapse navbar-collapse" id="nav-menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Prodotti</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Offerte</a>
+          </li>
+          <!-- Categorie (visibile solo da tablet in su, grazie alla navbar che si espande con navbar-expand-md) -->
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contatti</a>
+          </li>
+          <!-- Account aggiunto per extra -->
+          <li class="nav-item">
+            <a class="nav-link" href="#">Account</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </header>
+  </nav>
 
-    <section>
-      <hero class="bg-light py-5">
-        <div class="container text-center">
-
+  <!-- Carosello -->
+  <div id="hero" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+    
+    <div class="carousel-inner">
+      
+      <!-- Slide saldi di primavera -->
+      <div class="carousel-item active">
+        <div class="bg-primary text-white text-center py-5">
+          <div class="container py-4">
+            <h2 class="fs-1 fw-bold mb-3">Saldi di primavera</h2>
+            <p class="fs-5 m-0">Scopri le offerte sui prodotti in evidenza, fino al 50% di sconto.</p>
+          </div>
         </div>
-      </hero>
-      <section class="bg-light py-5">
-        <div class="container text-center">
-          <h2 class="fs-1 fw-bold mb-3">Saldi di primavera</h2>
-          <p class="fs-5 text-muted mb-4">Scopri le offerte sui prodotti in evidenza, fino al 50% di sconto.</p>
-          <a href="#" class="d-inline-block bg-primary text-white text-decoration-none py-2 px-4 rounded">Vedi i
-            prodotti</a>
+      </div>
+
+      <!-- Slide nuova collezione -->
+      <div class="carousel-item">
+        <div class="bg-success text-white text-center py-5">
+          <div class="container py-4">
+            <h2 class="fs-1 fw-bold mb-3">Nuova Collezione</h2>
+            <p class="fs-5 m-0">Le ultime tendenze per la tua estate. Scopri i nuovi arrivi.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide spedizione gratuita -->
+      <div class="carousel-item">
+        <div class="bg-dark text-white text-center py-5">
+          <div class="container py-4">
+            <h2 class="fs-1 fw-bold mb-3">Spedizione Gratuita</h2>
+            <p class="fs-5 m-0">Su tutti gli ordini superiori a 50€. Approfittane ora!</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Controlli Avanti / Indietro -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#hero" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#hero" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </button>
+
+  </div>
+ 
+  <main class="container my-4">
+    <div class="row">
+
+      <!-- Sidebar (visibile solo da desktop) -->
+      <aside class="col-lg-3 d-none d-lg-block">
+        <div class="bg-light p-3 rounded border">
+          <h3 class="fs-5 fw-bold mb-3">Categorie</h3>
+          <p class="m-0 mb-2">Abbigliamento</p>
+          <p class="m-0 mb-2">Scarpe</p>
+          <p class="m-0 mb-2">Accessori</p>
+          <p class="m-0 mb-2">Borse</p>
+        </div>
+      </aside>
+
+      <section class="col-12 col-lg-9">
+        <h2 class="fs-3 fw-bold mb-4 text-center text-md-start">
+          Prodotti in evidenza &nbsp; <span class="badge bg-danger fs-6">-30%</span>
+        </h2>
+
+        <div class="row">
+
+          <article class="col-12 col-sm-6 col-xl-4 col-xxl-3 mb-3">
+            <div class="border rounded p-3 bg-white shadow-sm">
+              <div class="bg-secondary mb-2 rounded" style="height: 160px;"></div>
+              <h3 class="fs-5 fw-bold m-0">Sneaker Run</h3>
+              <p class="text-muted m-0">€ 89,00</p>
+            </div>
+          </article>
+
+          <article class="col-12 col-sm-6 col-xl-4 col-xxl-3 mb-3">
+            <div class="border rounded p-3 bg-white shadow-sm">
+              <div class="bg-secondary mb-2 rounded" style="height: 160px;"></div>
+              <h3 class="fs-5 fw-bold m-0">T-shirt basic</h3>
+              <p class="text-muted m-0">€ 19,00</p>
+            </div>
+          </article>
+
+          <article class="col-12 col-sm-6 col-xl-4 col-xxl-3 mb-3">
+            <div class="border rounded p-3 bg-white shadow-sm">
+              <div class="bg-secondary mb-2 rounded" style="height: 160px;"></div>
+              <h3 class="fs-5 fw-bold m-0">Borsa city</h3>
+              <p class="text-muted m-0">€ 49,00</p>
+            </div>
+          </article>
+
+          <!-- Quarta card per extra visualizzazione xxl -->
+          <article class="col-12 col-sm-6 col-xl-4 col-xxl-3 mb-3">
+            <div class="border rounded p-3 bg-white shadow-sm">
+              <div class="bg-secondary mb-2 rounded" style="height: 160px;"></div>
+              <h3 class="fs-5 fw-bold m-0">Borsa city</h3>
+              <p class="text-muted m-0">€ 49,00</p>
+            </div>
+          </article>
+
         </div>
       </section>
 
-      <main class="container my-4">
-        <div class="row">
+    </div>
+  </main>
 
-          <!-- Contatti (visibile solo da desktop, stesso criterio di Contatti, ma è block e non inline) -->
-          <aside class="col-lg-3 d-none d-lg-block">
-            <div class="bg-light p-3 rounded border">
-              <h3 class="fs-5 fw-bold mb-3">Categorie</h3>
-              <p class="m-0 mb-2">Abbigliamento</p>
-              <p class="m-0 mb-2">Scarpe</p>
-              <p class="m-0 mb-2">Accessori</p>
-              <p class="m-0 mb-2">Borse</p>
-            </div>
-          </aside>
-          <section class="col-12 col-lg-9">
-            <h2 class="fs-3 fw-bold mb-4 text-center text-md-start">Prodotti in evidenza</h2>
+  <footer class="bg-dark text-white py-4 mt-5">
+    <div class="container text-center">
+      <p class="m-0">©2026 EpiShop - tutti i diritti riservati</p>
+    </div>
+  </footer>
 
-            <div class="row">
-
-              <article class="col-12 col-sm-6 col-xl-4 col-xxl-3 mb-3">
-                <div class="border rounded p-3 bg-white shadow-sm">
-                  <div class="bg-secondary mb-2 rounded" style="height: 160px;"></div>
-                  <h3 class="fs-5 fw-bold m-0">Sneaker Run</h3>
-                  <p class="text-muted m-0">€ 89,00</p>
-                </div>
-              </article>
-
-              <article class="col-12 col-sm-6 col-xl-4 col-xxl-3 mb-3">
-                <div class="border rounded p-3 bg-white shadow-sm">
-                  <div class="bg-secondary mb-2 rounded" style="height: 160px;"></div>
-                  <h3 class="fs-5 fw-bold m-0">T-shirt basic</h3>
-                  <p class="text-muted m-0">€ 19,00</p>
-                </div>
-              </article>
-
-              <article class="col-12 col-sm-6 col-xl-4 col-xxl-3 mb-3">
-                <div class="border rounded p-3 bg-white shadow-sm">
-                  <div class="bg-secondary mb-2 rounded" style="height: 160px;"></div>
-                  <h3 class="fs-5 fw-bold m-0">Borsa city</h3>
-                  <p class="text-muted m-0">€ 49,00</p>
-                </div>
-              </article>
-
-              <!-- Quarta card per extra visualizzazione xxl -->
-
-              <article class="col-12 col-sm-6 col-xl-4 col-xxl-3 mb-3">
-                <div class="border rounded p-3 bg-white shadow-sm">
-                  <div class="bg-secondary mb-2 rounded" style="height: 160px;"></div>
-                  <h3 class="fs-5 fw-bold m-0">Borsa city</h3>
-                  <p class="text-muted m-0">€ 49,00</p>
-                </div>
-              </article>
-
-            </div>
-          </section>
-
-        </div>
-      </main>
-
-      <footer class="bg-dark text-white py-4 mt-5">
-        <div class="container text-center">
-          <p class="m-0">©2026 EpiShop - tutti i diritti riservati</p>
-        </div>
-      </footer>
-
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 
 </html>
