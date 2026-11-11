@@ -5,8 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EpiShop — E-commerce</title>
+
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
@@ -24,6 +28,9 @@
           <li class="nav-item"><a class="nav-link" href="#">Contatti</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Account</a></li>
         </ul>
+
+     <!-- Bottone tema scuro -->
+        <button id="toggle-tema" type="button" class="btn btn-outline-light ms-md-2 mt-2 mt-md-0">Tema scuro</button>
       </div>
     </div>
   </nav>
@@ -31,7 +38,7 @@
   <!-- Carosello (Vuoto: verrà popolato da JS) -->
   <div id="hero" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
     <div class="carousel-inner" id="carousel-container"></div>
-    
+
     <button class="carousel-control-prev" type="button" data-bs-target="#hero" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     </button>
@@ -48,14 +55,17 @@
     </div>
 
     <div class="row">
-      <!-- Sidebar -->
+      <!-- Sidebar Categorie, modifiche fatte per tema scuro -->
       <aside class="col-lg-3 d-none d-lg-block">
-        <div class="bg-light p-3 rounded border">
-          <h3 class="fs-5 fw-bold mb-3">Categorie</h3>
-          <p class="m-0 mb-2">Abbigliamento</p>
-          <p class="m-0 mb-2">Scarpe</p>
-          <p class="m-0 mb-2">Accessori</p>
-          <p class="m-0 mb-2">Borse</p>
+        <!-- Uso "card shadow-sm" per avere lo stesso sfondo, bordo e ombra delle card -->
+        <div class="card shadow-sm p-3">
+          <!-- card-title: stesso colore del titolo dei prodotti -->
+          <h3 class="card-title fs-5 fw-bold mb-3">Categorie</h3>
+          <!-- card-text text-muted: stesso colore grigio della descrizione dei prodotti -->
+          <p class="card-text text-muted m-0 mb-2">Abbigliamento</p>
+          <p class="card-text text-muted m-0 mb-2">Scarpe</p>
+          <p class="card-text text-muted m-0 mb-2">Accessori</p>
+          <p class="card-text text-muted m-0 mb-2">Borse</p>
         </div>
       </aside>
 
@@ -79,9 +89,11 @@
     </div>
   </footer>
 
-    <script src="assets/js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-   
+  <!-- Script Bootstrap Bundle PRIMA del mio JS  -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Mio script JS -->
+  <script src="assets/js/script.js"></script>
 </body>
 
 </html>

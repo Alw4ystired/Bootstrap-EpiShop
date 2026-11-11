@@ -99,7 +99,7 @@ prodotti.forEach((prodotto) => {
           <p class="card-text text-muted">${prodotto.descrizione}</p>
           <p class="fw-bold fs-5 m-0">€ ${prodotto.prezzo}</p>
         </div>
-        <div class="card-footer bg-white border-0">
+        <div class="card-footer bg-transparent border-0">
           <!-- Il data-bs-target usa l'id dinamico per aprire la modale giusta -->
           <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
             data-bs-target="#prodotto-${prodotto.id}">Dettagli</button>
@@ -130,4 +130,21 @@ prodotti.forEach((prodotto) => {
       </div>
     </div>
   `;
+});
+
+
+// Tema scuro
+const toggleTemaBtn = document.querySelector('#toggle-tema');
+toggleTemaBtn.addEventListener('click', () => {
+    // Controllo se il tema corrente in html è già dark
+    const isDark = document.documentElement.getAttribute('data-bs-theme') === 'dark';
+    if (isDark) {
+        // Torna al tema chiaro
+        document.documentElement.setAttribute('data-bs-theme', 'light');
+        toggleTemaBtn.textContent = 'Tema scuro';
+    } else {
+        // Imposta il tema scuro
+        document.documentElement.setAttribute('data-bs-theme', 'dark');
+        toggleTemaBtn.textContent = 'Tema chiaro';
+    }
 });
