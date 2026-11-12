@@ -1,0 +1,58 @@
+/* Variabili tema chiaro */
+$brand-primary: #0d6efd;
+$radius-base: 8px;
+$shadow-card: 0 4px 12px rgba(0, 0, 0, 0.08);
+$shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.15);
+
+
+@mixin tema($bg, $testo, $card-bg, $bordo, $muted) {
+    // Colory body
+    background-color: $bg;
+    color: $testo;
+
+    // Colori card
+    .card {
+        background-color: $card-bg;
+        border-color: $bordo;
+
+        // Testo secondario dentro le card
+        .card-text {
+            color: $muted;
+        }
+
+        // Footer card
+        .card-footer {
+            background-color: $card-bg;
+        }
+    }
+
+    // Sidebar (aside con classe bg-light)
+    aside .bg-light {
+        background-color: $card-bg !important;
+        border-color: $bordo;
+        color: $testo;
+    }
+
+    // Modale
+    .modal-content {
+        background-color: $card-bg;
+        color: $testo;
+    }
+}
+
+
+/* Tema chiaro */
+body {
+  // mixin con i colori del tema chiaro
+  @include tema(#fafafa, #1a1a1a, #ffffff, #e0e0e0, #6c757d);
+
+  // Animazione fluida per il cambio tema
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+
+/* Tema scuro */
+[data-bs-theme="dark"] body {
+  // mixin con i colori del tema scuro
+  @include tema(#121212, #f0f0f0, #1f1f1f, #333, #aaaaaa);
+}
